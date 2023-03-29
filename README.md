@@ -4,15 +4,6 @@ This is an unofficial C++ implementation for the Journal of WSCG. 2002, vol. 10,
 
 ![](https://i.imgur.com/I09Cch8.png)
 
-## Demo
-
-![](https://i.imgur.com/49L3CCA.png)
-![](https://i.imgur.com/zmX58ZB.png)
-![](https://i.imgur.com/jamiCsD.png)
-![](https://i.imgur.com/ZlszWcG.png)
-![](https://i.imgur.com/eqymifO.png)
-
-
 ## Usage
 
 1. The input images are in directory ```./data```. The size of each image are as the following:
@@ -32,6 +23,14 @@ bash ./scripts/run.sh image_size K_fill K_adjust
 
 * If you want to use your own dataset, make sure all three images are grayscale and the same size, and in raw format.
 * To view to raw format, you can use [Photopea](https://www.photopea.com/).
+
+## Demo
+
+![](https://i.imgur.com/49L3CCA.png)
+![](https://i.imgur.com/zmX58ZB.png)
+![](https://i.imgur.com/jamiCsD.png)
+![](https://i.imgur.com/ZlszWcG.png)
+![](https://i.imgur.com/eqymifO.png)
 
 ## Citation
 Please cite the original paper if you use this code of parts of it:
