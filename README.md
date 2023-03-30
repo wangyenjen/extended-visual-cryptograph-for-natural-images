@@ -14,16 +14,16 @@ This is an unofficial C++ implementation for the Journal of WSCG. 2002, vol. 10,
     * three cats 256: 256 * 256 pixels
 2. Copy a directory from directory ```./data``` to the current directory and name it ```input```. (Note: Do not change the directory and filenames because they are hardcoded)
   * ```c.raw``` is the image to be encrypted.
-  * ```a.raw``` and ```b.raw``` are two other pictures.
+  * ```a.raw``` and ```b.raw``` are two other images.
 3. 
 ```sh
 bash ./scripts/run.sh image_size K_fill K_adjust
-# K_fill: one pixel extends to K_fill*K_fill subpixels
+# K_fill: one pixel extends to K_fill * K_fill subpixels
 # K_adjust: the contrast of the output images
 # sample usage: bash ./run.sh 256 3 60
 ```
 
-Finally, the generated pictures are placed in ```./res```.
+Finally, the generated images are placed in ```./res```.
 
 * If you want to use your own dataset, make sure all three images are grayscale and the same size, and in raw format.
 * To view to raw format, you can use [Photopea](https://www.photopea.com/).
