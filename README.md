@@ -20,7 +20,7 @@ This is an unofficial C++ implementation for the Journal of WSCG. 2002, vol. 10,
 bash ./scripts/run.sh image_size K_fill K_adjust
 # K_fill: one pixel extends to K_fill*K_fill subpixels
 # K_adjust: the contrast of the output images
-# sample usage: bash ./run.sh 256 3 70
+# sample usage: bash ./run.sh 256 3 60
 ```
 
 Finally, the generated pictures are placed in ```./res```.
