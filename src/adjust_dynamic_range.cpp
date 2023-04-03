@@ -344,12 +344,12 @@ void error_diffusion(unsigned char A[SIZE][SIZE], int err[SIZE][SIZE]) {
     for (int i = 0; i + 1 < SIZE; i++) {
         if (~i & 1) { // from left to right
             for (int j = 1; j + 1 < SIZE; j++) {
-                    for (int dx = 0; dx <= 1; dx++) {
-                        for (int dy = -1; dy <= 1; dy++) {
-                            A[i + dx][j + dy] +=
-                                LEFT_TO_RIGHT_FILTER[dx][dy + 1] * err[i][j];
-                        }
+                for (int dx = 0; dx <= 1; dx++) {
+                    for (int dy = -1; dy <= 1; dy++) {
+                        A[i + dx][j + dy] +=
+                            LEFT_TO_RIGHT_FILTER[dx][dy + 1] * err[i][j];
                     }
+                }
             }
         } else { // from right to left
             for (int j = SIZE - 2; j >= 1; j--) {
