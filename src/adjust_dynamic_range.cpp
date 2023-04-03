@@ -91,21 +91,17 @@ struct KDTree {
             } else if (d == 1) {
                 if (std::get<1>(a) != std::get<1>(b)) {
                     return std::get<1>(a) < std::get<1>(b);
-                }
-                else if (std::get<2>(a) != std::get<2>(b)) {
+                } else if (std::get<2>(a) != std::get<2>(b)) {
                     return std::get<2>(a) < std::get<2>(b);
-                }
-                else {
+                } else {
                     return std::get<0>(a) < std::get<0>(b);
                 }
             } else {
                 if (std::get<0>(a) != std::get<0>(b)) {
                     return std::get<0>(a) < std::get<0>(b);
-                }
-                else if (std::get<1>(a) != std::get<1>(b)) {
+                } else if (std::get<1>(a) != std::get<1>(b)) {
                     return std::get<1>(a) < std::get<1>(b);
-                }
-                else {
+                } else {
                     return std::get<2>(a) < std::get<2>(b);
                 }
             }
@@ -161,7 +157,7 @@ struct KDTree {
                     query(o->lc);
                 }
             }
-        }  else if (t1 < ans_val) {
+        } else if (t1 < ans_val) {
             query(o->lc);
         } else if (t2 < ans_val) {
             query(o->rc);
@@ -355,8 +351,7 @@ void error_diffusion(unsigned char A[SIZE][SIZE], int err[SIZE][SIZE]) {
                         }
                     }
             }
-        }
-        else { // from right to left
+        } else { // from right to left
             for (int j = SIZE - 2; j >= 1; j--) {
                 for (int dx = 0; dx <= 1; dx++) {
                     for (int dy = -1; dy <= 1; dy++) {

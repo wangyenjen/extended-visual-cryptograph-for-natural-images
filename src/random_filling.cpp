@@ -1,6 +1,6 @@
 #include <cstdio>
+#include <random>
 #include <vector>
-#include <cstdlib>
 #include <utility>
 #include <cassert>
 #include <algorithm>
@@ -12,7 +12,8 @@ unsigned char C2[SIZE * K][SIZE * K];
 void greedy_fill(unsigned char A[SIZE][SIZE],
                  unsigned char B[SIZE][SIZE],
                  unsigned char C[SIZE][SIZE]) {
-    srand(880301);
+    static constexpr int RAND_SEED = 880301;
+    static std::mt19937 gen(RAND_SEED);
 
     for (int i = 0; i < SIZE; i++) {
         for (int j = 0; j < SIZE; j++) {
@@ -46,7 +47,7 @@ void greedy_fill(unsigned char A[SIZE][SIZE],
             
             assert((int)vs.size() == K * K);
             
-            std::random_shuffle(vs.begin(), vs.end());
+            std::shuffle(vs.begin(), vs.end(), gen);
             
             for (int x = 0; x < K; x++) {
                 for (int y = 0; y < K; y++) {
